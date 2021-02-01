@@ -102,8 +102,8 @@ for row_num in range(0, len(body_rows), 2): # A row at a time, skip the divider 
     # append one row to all_rows
     all_rows.append(row)
 
-## Use pandas to make the table less fucking gross
-# turn it into a pandas dataframe
+## Use pandas to make the table less gross
+# turn table into a pandas dataframe
 df = pd.DataFrame(all_rows, columns=headings)
 
 # get rid of the day of the week and only keep the date
@@ -112,7 +112,7 @@ df['Day'] = df['Day'].apply(lambda x: x[0:2]).str.strip()
 # set the date as the index
 df.set_index('Day',inplace=True)
 
-# drop sun times, moon phase, coeff, and solunar
+# drop sun times, moon phase, coeff, and solunar activity
 df.drop(['Sun Rise/Set','Moon Phase','Coefficient','Solunar Activity'],axis=1,inplace=True)
 
 # create empty lists for final data
