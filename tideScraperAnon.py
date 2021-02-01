@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Web scraper for tidal data from tides4fishing.
+Web scraper for tidal data from xxxxxxxxxxxxxx.
 Pulls the high and low tidal amplitudes as well as when they occur. Stores data in a CSV.
 
 
