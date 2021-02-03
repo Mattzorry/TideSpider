@@ -38,23 +38,23 @@ driver.get(url)
 
 
 # click calendar to bring up options to change the date
-cal_icon = driver.find_element_by_id('boton_calendario_header')
+cal_icon = driver.find_element_by_id('xxxxxxxxx')
 cal_icon.click()
 time.sleep(1)
 
 # set the year
-cal_years = Select(driver.find_element_by_id('textyear'))
+cal_years = Select(driver.find_element_by_id('xxxxxxxxx'))
 cal_years.select_by_visible_text('yearChoice')
 time.sleep(1)
 
 # set the month
-cal_years = Select(driver.find_element_by_id('meses'))
+cal_years = Select(driver.find_element_by_id('xxxxxxxxx'))
 cal_years.select_by_visible_text('monthChoice')
 time.sleep(1)
 
 
 # close the calendar
-driver.find_element_by_id('calendario_boton_aceptar').click()
+driver.find_element_by_id('xxxxxxxxx').click()
 
 # grab page source to pass off to BS
 page_source = driver.page_source
@@ -71,7 +71,7 @@ import pandas as pd
 soup = BeautifulSoup(page_source, 'lxml')
 
 # Get the tide data table
-gdp = soup.find_all("table", attrs={"id": "tabla_mareas"})
+gdp = soup.find_all("table", attrs={"id": "xxxxxxxxx"})
 tide_table = gdp[0]
 
 # the head will form our column names
